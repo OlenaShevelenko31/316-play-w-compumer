@@ -10,7 +10,7 @@ console.log(computerNum);
 let usersNum;
 
 do {
-    usersNum = prompt('Enter your number from 0-50: ');
+    usersNum = window.prompt('Enter your number from 0-50: ');
 
     if (usersNum === null || usersNum < 0 || usersNum > 50) {
         window.alert('It is not a valid number');
@@ -24,7 +24,9 @@ do {
     } else if (usersNum < computerNum) {
         window.alert(`Try a bigger number than ${usersNum}`);
     } else {
-        window.alert("Victory!");
+        setTimeout(()=>{
+            window.alert("Victory!");
+        }, 1000);
         break;
     }
 } while (usersNum !== null && usersNum !== computerNum);
