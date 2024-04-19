@@ -1,6 +1,6 @@
 const input = document.querySelector ('.input');
 const button = document.querySelector ('.btnPlay');
-const answer = Math.floor(Math.random()*10+1);
+const answer = Math.floor(Math.random()*50+1);
 console.log(answer);
 
 input.addEventListener('keypress', function(e){
@@ -13,7 +13,7 @@ button.addEventListener ('click', game);
 
 function game(){
     const number = document.querySelector ('.input').value;
-    if( number < 1  || number > 10){
+    if( number < 0  || number > 50){
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
